@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarohan: Smart City Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050012;
+            color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #01002c, #1a004f);
+            color: white;
+            padding: 15px 20px;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #1abc9c, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .branches {
+            display: flex;
+            gap: 25px;
+        }
+        .branches a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: system-ui;
+        }
+        .branches a:hover {
+            color: #01435b;
+            text-shadow: 0 0 10px #001e18;
+        }
+        .content {
+            padding: 20px;
+            display: none; /* Hidden by default */
+        }
+        .content.active {
+            display: block; /* Display active content */
+        }
+        .home {
+            padding: 20px;
+        }
+        .home-box {
+    background: linear-gradient(145deg, #060011, #120136);
+    color: #f5f5f5;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #3498db;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0, 0, 116, 0.5);
+    width: 1100px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+        .home h2 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #090161, #12d5f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subheading {
+            margin-top: -10px;
+            font-size: 24px;
+            font-style: italic;
+            color: #0065ca;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            font-family: system-ui;
+        }
+        ul {
+            text-align: left;
+            display: inline-block;
+            padding: 0;
+            margin: 20px auto;
+            font-family: system-ui;
+        }
+        ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #f5f5f5;
+            padding: 5px;
+            font-family: system-ui;
+        }
+        ul li strong {
+            font-family: system-ui;
+            font-size:25px; ;
+            color: #034f91;
+        }
+ /* Style for the container of Team Boxes */
+.team-boxes-container {
+    width: 90%; /* Adjust this to control how much space you want on the left and right */
+    max-width: 1200px; /* Set a max-width for the boxes to prevent them from becoming too wide */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px 0; /* Add some space above and below */
+}
+
+/* Style for the container of Team Boxes */
+.team-boxes-container {
+    width: 90%; /* Adjust this to control how much space you want on the left and right */
+    max-width: 1200px; /* Set a max-width for the boxes to prevent them from becoming too wide */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px 0; /* Add some space above and below */
+}
+/* Style for the container of Team Boxes */
+.team-boxes-container {
+    width: 90%; /* Adjust this to control how much space you want on the left and right */
+    max-width: 1200px; /* Set a max-width for the boxes to prevent them from becoming too wide */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px 0; /* Add some space above and below */
+}
+
+/* Style for the container of Team Boxes */
+.team-boxes-container {
+    width: 90%; /* Adjust this to control how much space you want on the left and right */
+    max-width: 1200px; /* Set a max-width for the boxes to prevent them from becoming too wide */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px 0; /* Add some space above and below */
+}
+
+/* Style for Team Boxes */
+.team-boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 boxes in one row */
+    gap: 1cm; /* Set the gap between the boxes to 1cm */
+    margin-top: 30px;
+}
+
+.team-box {
+    background: linear-gradient(145deg, #060011, #120136);
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #3498db;
+    box-shadow: 0 6px 15px rgba(0, 0, 116, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 250px; /* Decreased width */
+    height: 300px; /* Increased height */
+    margin: 0 auto; /* Centering the boxes within the grid cells */
+}
+
+.team-box h3 {
+    font-size: 24px;
+    color: #0d5099;
+    margin-bottom: 10px;
+}
+
+.team-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.team-box a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.team-box a:hover {
+    text-decoration: underline;
+}
+
+/* Add hover effect */
+.team-box:hover {
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">Smart City Design</div>
+        <div class="branches">
+            <a onclick="showHome()">Home</a>
+            <a onclick="showContent('course-intro')">Course Introduction</a>
+            <a onclick="showContent('city-intro')">City Introduction</a>
+            <a onclick="showContent('team-details')">Team Details</a>
+        </div>
+    </header>
+    <div class="home">
+        <div class="home-box">
+            <h2>Welcome to Aarohan</h2>
+            <p class="subheading">The city of ascendry...</p>
+            <p>
+                Aarohan is a smart city design project that integrates advanced technology,
+                sustainable practices, and innovative urban planning to create a modern,
+                eco-friendly community.
+            </p>
+        </div>
+    </div>
+    
+    <div id="course-intro" class="content">
+        <div class="home">
+            <div class="home-box">
+                <h2>Course Introduction</h2>
+                <p class="subheading">Design and analysis of algorithms</p>
+                
+            </div>
+        </div>
+        <h2>Course Reflection</h2>
+        <p>
+            The “Design and Analysis of Algorithms” course dives into the basics of creating and improving algorithms to tackle real-world problems. 
+            It focuses on how to evaluate their performance, looking at time and space complexity to ensure they run efficiently. 
+            We will pick up practical skills for designing and refining algorithms, making it easier to solve tricky computational challenges.
+        </p>
+        <h3>Learnings</h3>
+        <ul>
+            <li><strong>Trees and Applications:</strong> Binary Search Trees, AVL Trees, 2-3 Trees, and Red-Black Trees for organizing data.</li>
+            <li><strong>Array Query Algorithms:</strong> Fenwick Tree, Sparse Table, and Look-up Table for efficient range queries and data processing.</li>
+            <li><strong>Sorting and Searching:</strong> Quick Sort, Merge Sort, Heap Sort, and Binary Search to organize and find data quickly.</li>
+            <li><strong>Graph Algorithms:</strong> BFS and DFS for exploring networks, Dijkstra’s and Bellman-Ford for shortest paths, and Prim’s and Kruskal’s for connecting nodes efficiently.</li>
+        </ul>
+        <h3>Real-Life Applications</h3>
+        <ul>
+            <li>Using BFS and DFS for network traversal and shortest path calculations.</li>
+            <li>Implementing Binary Search Trees and Tries for efficient data retrieval.</li>
+            <li>Applying Dijkstra’s and Prim’s algorithms for route optimization in transportation.</li>
+            <li>Utilizing pattern-matching algorithms in text processing and DNA sequencing.</li>
+        </ul>
+    </div>
+    <div id="city-intro" class="content">
+            <div class="home">
+                <div class="home-box">
+                    <h2>City Introduction</h2>
+                    <p class="subheading"> Aarohan – A Smart City</p>
+                    
+                </div>
+            </div>
+  
+        <h3>Overview</h3>
+        <p>
+            Our team is leading the charge on developing a 1,500-square-kilometer smart city named Aarohan,
+            surrounded by hills and mountains. With a projected population of 1 million and a ₹15,000 crore budget,
+            the project combines advanced technology, sustainable practices, and innovative urban design to create a modern,
+            eco-friendly community. The initiative showcases our team’s dedication to crafting a forward-thinking urban environment
+            that integrates nature, technology, and efficient infrastructure.
+        </p>
+        <h3>Problem Space and Insights</h3>
+        <p>
+            This project stems from the need for a harmonious blend of nature, technology, and sustainability.
+            By analyzing white papers and global trends in urban development, we identified key challenges such as:
+        </p>
+        <ul>
+            <li>Overcrowded cities.</li>
+            <li>Inefficient waste management.</li>
+            <li>Lack of smart technology in everyday infrastructure.</li>
+        </ul>
+        <p>
+            Our findings emphasized the need for sustainable city designs powered by renewable energy, smart public services,
+            and eco-tourism.
+        </p>
+    </div>
+    <div id="team-details" class="content">
+        <h2>Our Team</h2>
+        <div class="team-boxes-container">
+            <div class="team-boxes">
+                <div class="team-box">
+                    <h3>Shreya</h3>
+                    <p>Roll Number: 301</p>
+                    <p>USN: 01FE23BCS010</p>
+                    <a href="#">View Profile</a>
+                </div>
+                <div class="team-box">
+                    <h3>Vaishnavi</h3>
+                    <p>Roll Number: 320</p>
+                    <p>USN: 01FE23BCS114</p>
+                    <a href="#">View Profile</a>
+                </div>
+                <div class="team-box">
+                    <h3>Bhagyashree</h3>
+                    <p>Roll Number: 327</p>
+                    <p>USN: 01FE23BCS144</p>
+                    <a href="https://01fe23bcs144.github.io/Aarohan/" target="_blank">View Profile</a>
+                </div>
+                <div class="team-box">
+                    <h3>Apeksha</h3>
+                    <p>Roll Number: 345</p>
+                    <p>USN: 01FE23BCS</p>
+                    <a href="#">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showContent(sectionId) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.classList.remove('active'));
+        
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        
+            // Handle the home section visibility
+            if (sectionId === 'home') {
+                // Show the home section if "Home" is clicked
+                document.querySelector('.home').style.display = 'block';
+            } else {
+                // Hide the home section if another section is clicked
+                document.querySelector('.home').style.display = 'none';
+            }
+        }
+    
+        // Attach event listeners for the "Home" link to display the home section
+        document.querySelector('a[onclick="showContent(\'home\')"]').addEventListener('click', function() {
+            showContent('home');
+        });
+    </script>
+    
